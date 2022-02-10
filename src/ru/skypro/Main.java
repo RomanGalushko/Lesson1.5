@@ -28,11 +28,17 @@ public class Main {
 
         //Tesk2
 
-        System.out.print(locker[0] + ",");
-        System.out.print(locker[1] + ",");
-        System.out.print(locker[2] + ",");
-        System.out.print(locker[3] + ",");
-        System.out.print(locker[4] + "\n");
+        {
+            int i = 0;
+            while (i < locker.length) {
+                if (i == locker.length - 1) {
+                    System.out.println(locker[i] + " ");
+                    break;
+                }
+                System.out.print(locker[i] + ", ");
+                i++;
+            }
+        }
 
         for (int i = 0; i < newLocker.length; i++) {
             if (i == newLocker.length - 1) {
@@ -47,11 +53,17 @@ public class Main {
 
         //Tesk3
 
-        System.out.print(locker[4] + ",");
-        System.out.print(locker[3] + ",");
-        System.out.print(locker[2] + ",");
-        System.out.print(locker[1] + ",");
-        System.out.print(locker[0] + "\n");
+        {
+            int i = locker.length -1;
+            while (i >= 0) {
+                if (i == 0) {
+                    System.out.println(locker[i] + " ");
+                    break;
+                }
+                System.out.print(locker[i] + ", ");
+                i--;
+            }
+        }
 
         for (int i = newLocker.length - 1; i >= 0; i--) {
             if (i == 0) {
@@ -66,25 +78,11 @@ public class Main {
 
         //Tesk4
 
-        if (locker[0] % 2 != 0) {
-            locker[0] += 1;
-            System.out.print(locker[0] + ", ");
-        }
-        if (locker[1] % 2 != 0) {
-            locker[1] += 1;
-            System.out.print(locker[1] + ", ");
-        }
-        if (locker[2] % 2 != 0) {
-            locker[2] += 1;
-            System.out.print(locker[2] + ", ");
-        }
-        if (locker[3] % 2 != 0) {
-            locker[3] += 1;
-            System.out.print(locker[3] + ", ");
-        }
-        if (locker[4] % 2 != 0) {
-            locker[4] += 1;
-            System.out.print(locker[4] + "\n");
+        for (int i : locker) {
+            if (i % 2 != 0) {
+                i += 1;
+                System.out.print(i + " ");
+            }
         }
 
     }
